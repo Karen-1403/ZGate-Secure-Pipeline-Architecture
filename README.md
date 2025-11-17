@@ -2,7 +2,7 @@
 A multi-layered Zero Trust database access pipeline
 
 ## Overview
-**ZGate** is a Zero Trust database access proxy designed for secure, controlled, and observable access to databases in modern cloud environments.
+**ZGate** is a Zero Trust database access proxy designed for secure, controlled, and observable access to databases.
 
 It applies the Zero Trust principle:
 
@@ -59,9 +59,8 @@ Instead of one big security function, ZGate breaks checks into **independent fil
 1. **Authentication Filter** — verifies the identity of the request  
 2. **Authorization Filter** — checks user permissions  
 3. **Validation Filter** — ensures the request is safe and correctly structured  
-4. **Rate Limiting Filter** — prevents abuse and high-frequency access  
-5. **Logging Filter** — records all events for auditing  
-6. **Execution Filter** — hands the validated request to business logic  
+4. **Logging Filter** — records all events for auditing  
+5. **Execution Filter** — hands the validated request to business logic  
 
 **Benefit:**  
 Each filter is modular, replaceable, and individually upgradeable without affecting the rest of the system.
@@ -101,7 +100,7 @@ ZGate supports multiple databases through a **strategy pattern**:
 - PostgreSQL Adapter  
 - MySQL Adapter  
 - MongoDB Adapter  
-- Redis Adapter  
+
 
 Each adapter implements a common interface so the rest of the system doesn’t care which database is behind it.
 
